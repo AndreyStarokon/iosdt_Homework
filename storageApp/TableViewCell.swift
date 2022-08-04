@@ -9,28 +9,18 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    var file: URL? {
-        didSet {
-            title.text = "\(String(file?.lastPathComponent ?? ""))"
-
+    var photoImage: UIImage? {
+            didSet {
+                photoCell.photoImageView.image = photoImage
+            }
         }
-    }
 
-      var title: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        label.textColor = .black
-        label.numberOfLines = 1
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
 
+    let photoCell = TableViewTabCell()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        accessoryType = .disclosureIndicator
+        photoCell.translatesAutoresizingMaskIntoConstraints = false
         setupViews()
     }
     
@@ -39,14 +29,16 @@ class TableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
-        contentView.addSubview(title)
+        contentView.addSubview(photoCell)
 
         
         let constraints = [
-            title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
-            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
-            title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
-        ]
+                    photoCell.topAnchor.constraint(equalTo: contentView.topAnchor),
+                    photoCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+                    photoCell.heightAnchor.constraint(equalTo: contentView.widthAnchor),
+                    photoCell.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+                    
+                ]
         
         NSLayoutConstraint.activate(constraints)
     }

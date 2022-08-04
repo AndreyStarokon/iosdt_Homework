@@ -13,6 +13,10 @@
 		479AE912288F05E200F44B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479AE910288F05E200F44B8D /* LaunchScreen.storyboard */; };
 		479AE91A28906B1000F44B8D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479AE91928906B1000F44B8D /* TableViewCell.swift */; };
 		479AE91C28954FBC00F44B8D /* UIviewFolderControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479AE91B28954FBC00F44B8D /* UIviewFolderControllerViewController.swift */; };
+		479AE91F2896D2A700F44B8D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 479AE91E2896D2A700F44B8D /* KeychainAccess */; };
+		479AE9212896D2F100F44B8D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479AE9202896D2F000F44B8D /* SettingsViewController.swift */; };
+		479AE9242896D34F00F44B8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479AE9232896D34F00F44B8D /* LoginViewController.swift */; };
+		479AE92628998BCF00F44B8D /* TableViewTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479AE92528998BCF00F44B8D /* TableViewTabCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		479AE913288F05E200F44B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		479AE91928906B1000F44B8D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		479AE91B28954FBC00F44B8D /* UIviewFolderControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIviewFolderControllerViewController.swift; sourceTree = "<group>"; };
+		479AE9202896D2F000F44B8D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		479AE9232896D34F00F44B8D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		479AE92528998BCF00F44B8D /* TableViewTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTabCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479AE91F2896D2A700F44B8D /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,26 @@
 		479AE904288F05E000F44B8D /* storageApp */ = {
 			isa = PBXGroup;
 			children = (
+				479AE9222896D33000F44B8D /* Controllers */,
 				479AE905288F05E000F44B8D /* AppDelegate.swift */,
-				479AE909288F05E000F44B8D /* ViewController.swift */,
 				479AE90E288F05E200F44B8D /* Assets.xcassets */,
 				479AE910288F05E200F44B8D /* LaunchScreen.storyboard */,
 				479AE913288F05E200F44B8D /* Info.plist */,
 				479AE91928906B1000F44B8D /* TableViewCell.swift */,
+				479AE92528998BCF00F44B8D /* TableViewTabCell.swift */,
 				479AE91B28954FBC00F44B8D /* UIviewFolderControllerViewController.swift */,
 			);
 			path = storageApp;
+			sourceTree = "<group>";
+		};
+		479AE9222896D33000F44B8D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				479AE9202896D2F000F44B8D /* SettingsViewController.swift */,
+				479AE909288F05E000F44B8D /* ViewController.swift */,
+				479AE9232896D34F00F44B8D /* LoginViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = storageApp;
+			packageProductDependencies = (
+				479AE91E2896D2A700F44B8D /* KeychainAccess */,
+			);
 			productName = storageApp;
 			productReference = 479AE902288F05E000F44B8D /* storageApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 479AE8F9288F05E000F44B8D;
+			packageReferences = (
+				479AE91D2896D2A700F44B8D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 479AE903288F05E000F44B8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479AE92628998BCF00F44B8D /* TableViewTabCell.swift in Sources */,
+				479AE9242896D34F00F44B8D /* LoginViewController.swift in Sources */,
 				479AE91A28906B1000F44B8D /* TableViewCell.swift in Sources */,
 				479AE91C28954FBC00F44B8D /* UIviewFolderControllerViewController.swift in Sources */,
 				479AE90A288F05E000F44B8D /* ViewController.swift in Sources */,
+				479AE9212896D2F100F44B8D /* SettingsViewController.swift in Sources */,
 				479AE906288F05E000F44B8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		479AE91D2896D2A700F44B8D /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		479AE91E2896D2A700F44B8D /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 479AE91D2896D2A700F44B8D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 479AE8FA288F05E000F44B8D /* Project object */;
 }
