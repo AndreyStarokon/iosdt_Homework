@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBarVC
         
        
-        let firstVC = ViewController()
+        let firstVC = LoginViewController()
         let firstNavController = UINavigationController(rootViewController: firstVC)
         
         firstVC.tabBarItem = UITabBarItem(title: "Привычки", image: UIImage(named: "habits"), tag: 0)
